@@ -14,10 +14,13 @@ void multiplication();
 void division();
 void addition();
 void subtraction();
+void sine();
+void cosine();
+void tangent();
 
 int main() {
     int x;
-    cout << "Enter a value 1 through 11:  \n"
+    cout << "Enter a value 1 through 14:  \n"
          << " 1.) For absolute value. \n"
          << " 2.) For square root. \n"
          << " 3.) For cube root. \n"
@@ -28,7 +31,10 @@ int main() {
          << " 8.) For multiplication. \n"
          << " 9.) For division. \n"
          << " 10.) For addition. \n"
-         << " 11.) For subtraction. \n";
+         << " 11.) For subtraction. \n"
+         << " 12.) For sine. \n"
+         << " 13.) For cosine. \n"
+         << " 14.) For tangent. \n";
     cin >> x;
 
     switch (x) {
@@ -43,6 +49,9 @@ int main() {
         case 9: division(); break;
         case 10: addition(); break;
         case 11: subtraction(); break;
+        case 12: sine(); break;
+        case 13: cosine(); break;
+        case 14: tangent(); break;
         default: cout << "Invalid choice." << endl;
     }
 
@@ -136,4 +145,28 @@ void subtraction() {
     cout << "Enter two numbers to subtract them: " << endl;
     cin >> x >> y;
     cout << x << " - " << y << " = " << x - y << endl;
+}
+
+void sine() {
+    double x;
+
+    cout << "Enter a number to find the sine: " << endl;
+    cin >> x;
+    cout << "The sine of " << x << " is: " << sin(x) << endl;
+}
+
+void cosine() {
+    double x;
+
+    cout << "Enter a nnumber to find the cosine: " << endl;
+    cin >> x;
+    cout << "The cosine of " << x << " is: " << cos(x) << endl;
+}
+
+void tangent() {
+    double x;
+
+    cout << "Enter a number to find the tangent: " << endl;
+    cin >> x;
+    cout << "The tangent of " << x << " is: " << tan(x) << endl;
 }
